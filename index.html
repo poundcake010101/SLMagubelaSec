@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>S L Magubela Escort Security & Transport</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="mediaqueries.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <div class="logo">S L Magubela Est</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#contact">Contact Info</a></li>
+                    <li><a href="#callToAction">Get Quote</a></li>
+                </ul>
+            </div>
+        </nav> 
+        <nav id="hamburger-nav">
+            <div class="logo">S L Magubela Est</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About Us</a></li>
+                    <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                    <li><a href="#staff" onclick="toggleMenu()">Staff</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact Info</a></li>
+                    <li><a href="#callToAction" onclick="toggleMenu()">Get Quote</a></li>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="section-container">
+                <div class="section__text">
+                    <p class="section__text__p1">Professional Security Solutions</p>
+                    <h1 class="title">S L Magubela Escort Security & Transport</h1>
+                    <p class="section__text__p2">Your Trusted Partner for High-Value Asset Protection and Secure Transportation</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-1" onclick="location.href='./#services'">Our Services</button>
+                        <button class="btn btn-color-2" onclick="location.href='./#contact'">Emergency Contact</button>
+                    </div>
+                </div>
+                <div class="section__pic-container">
+                    <img src="./assets/logo.jpg" alt="S L Magubela Security Services">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about"> 
+            <p class="section__text__p1">Get To Know More</p>
+            <h1 class="title">About Our Company</h1>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img src="./assets/logo.jpg" alt="S L Magubela Security Services" class="about-pic" />
+                </div>
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Established</h3>
+                            <p>Since 2025<br />Trusted Security Provider</p>
+                        </div>
+                        <div class="details-container">
+                            <i class="fas fa-bullseye"></i>
+                            <h3>Mission</h3>
+                            <p>Delivering Excellence<br />in Security & Protection</p>
+                        </div>
+                        <div class="details-container">
+                            <i class="fas fa-eye"></i>
+                            <h3>Vision</h3>
+                            <p>Leading Innovation<br />in Security Solutions</p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p>
+                            S.L Magubela Escort Security and Transport (Pty) Ltd is a trusted provider of comprehensive security solutions and professional protection for high-value transport. We understand the importance of safeguarding high-profile individuals and valuable assets during transportation. Our highly trained security personnel and state-of-the-art equipment ensure safe, secure, and reliable escort services for your most important cargo and personnel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <p class="section__text__p1">What We Offer</p>
+            <h1 class="title">Our Services</h1>
+            <div class="skills-details-container">
+                <div class="about-containers">
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/temp-armed.jpeg" alt="Armed Escort Services" class="project-img"/>
+                        </div>
+                        <h2 class="skills-sub-title project-title">Armed Escort Services</h2>
+                        <p class="project-description">
+                            Professional armed escort services for high-value assets, cash-in-transit, and VIP protection. Our trained personnel ensure safe passage and maximum security.
+                        </p>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/temp-secure-transport.jpeg" alt="Secure Transportation" class="project-img"/>
+                        </div>
+                        <h2 class="skills-sub-title project-title">Secure Transportation</h2>
+                        <p class="project-description">
+                            Comprehensive secure transportation solutions for valuable goods, documents, and personnel. Advanced tracking and communication systems included.
+                        </p>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/temp-risk-assessment.jpeg" alt="Risk Assessment" class="project-img"/>
+                        </div>
+                        <h2 class="skills-sub-title project-title">Risk Assessment</h2>
+                        <p class="project-description">
+                            Professional risk assessment and security planning services. We identify potential threats and develop comprehensive security strategies for your operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff Section -->
+        <section id="staff">
+            <p class="section__text__p1">Meet Our Team</p>
+            <h1 class="title clickable-title" onclick="openTeamVideoModal()">
+                Our Security Professionals
+                <span class="click-hint">👆 Click to watch our team introduction video</span>
+            </h1>
+            <div class="skills-details-container">
+                <div class="about-containers">
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/temp.jpeg" alt="Security Manager" class="project-img"/>
+                        </div>
+                        <h2 class="skills-sub-title project-title">Security Manager</h2>
+                        <p class="project-description">
+                            Certified security professional with 10+ years of experience in high-risk protection and escort services. Specialized in VIP and asset protection protocols.
+                        </p>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/temp.jpeg" alt="Escort Team Leader" class="project-img"/>
+                        </div>
+                        <h2 class="skills-sub-title project-title">Escort Team Leader</h2>
+                        <p class="project-description">
+                            Experienced team leader with 8+ years in secure transportation. Expert in route planning, threat assessment, and emergency response procedures.
+                        </p>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/temp.jpeg" alt="Security Specialist" class="project-img"/>
+                        </div>
+                        <h2 class="skills-sub-title project-title">Security Specialist</h2>
+                        <p class="project-description">
+                            Highly trained security specialist with expertise in defensive driving, conflict resolution, and advanced protection techniques for high-value targets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <p class="section__text__p1">Get in Touch</p>
+            <h1 class="title">Contact Us</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img src="./assets/email.jpg" alt="Email icon" class="icon contact-icon"/>
+                    <p><a href="mailto:info@slmagubela.co.za">mngunisimphiwe95@gmail.com</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img src="./assets/phone.jpeg" alt="Phone icon" class="icon contact-icon"/>
+                    <p><a href="tel:+27660670102">+27 66 067 0102</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img src="./assets/emergency-phone.jpg" alt="Emergency Phone icon" class="icon contact-icon"/>
+                    <p><a href="tel:+27660670102">Emergency: +27 66 067 0102</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img src="./assets/location.jpeg" alt="Location icon" class="icon contact-icon"/>
+                    <p>TBH-SOON</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="callToAction">
+            <div class="cta-container">
+                <h2>Need Immediate Security Assistance?</h2>
+                <p>Contact us today for a free security assessment and quote</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Get Security Quote</button>
+                    <button class="btn btn-color-2" onclick="location.href='tel:+27 66 067 0102'">24/7 Emergency Line</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Modal for Team Section -->
+        <div id="teamVideoModal" class="video-modal">
+            <div class="video-modal-content">
+                <span class="close-btn" onclick="closeTeamVideoModal()">&times;</span>
+                <video id="teamVideoFrame" width="100%" height="480" controls style="background: #000;">
+                    <source src="./assets/team.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#staff">Staff</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2025 S L Magubela Escort Security and Transport (Pty) Ltd. All Rights Reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
