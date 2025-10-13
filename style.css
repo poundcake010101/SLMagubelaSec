@@ -41,7 +41,7 @@ nav {
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
   font-size: 1.2rem;
 }
@@ -288,7 +288,8 @@ section {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #555;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
 .about-containers {
@@ -372,12 +373,142 @@ section {
   color: #555;
   text-align: center;
 }
+#services .project-img {
+  height: auto;
+  max-height: 300px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 1rem;
+}
+
+/* Markets Section */
+#markets {
+  background-color: #f8f9fa;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.markets-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.market-category {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.market-category:hover {
+  transform: translateY(-5px);
+}
+
+.market-category h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.market-category ul {
+  text-align: left;
+  color: #555;
+  list-style: none;
+  padding: 0;
+}
+
+.market-category li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.market-category li:before {
+  content: "•";
+  color: #2c3e50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Competitive Edge Section */
+#competitive-edge {
+  padding: 6rem 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.advantages-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advantage {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  border: 2px solid #e9ecef;
+  transition: transform 0.3s ease;
+}
+
+.advantage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.advantage i {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.advantage h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.advantage p {
+  color: #555;
+  line-height: 1.6;
+}
 
 /* Staff Section */
 #staff {
   position: relative;
   padding: 6rem 2rem;
   background-color: #f8f9fa;
+}
+#staff .project-img {
+  height: auto;
+  max-height: 300px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #f8f9fa;
+  padding: 10px;
 }
 
 /* Clickable Title Styles */
@@ -648,7 +779,7 @@ footer p {
 }
 
 .nav-links-container .nav-links a {
-  color: #bdc3c7;
+  color: #000000;
 }
 
 .nav-links-container .nav-links a:hover {
@@ -714,6 +845,33 @@ footer p {
   
   #about .section__pic-container {
     max-width: 300px;
+  }
+  
+  #about .text-container p {
+    text-align: center;
+  }
+  
+  /* Markets & Advantages Mobile */
+  .markets-container,
+  .advantages-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .market-category,
+  .advantage {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Services Mobile */
+  #services .details-container {
+    min-width: 100%;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    font-size: 1.1rem;
   }
   
   /* Video Modal Mobile */
@@ -784,5 +942,22 @@ footer p {
   
   .video-modal-content video {
     height: 250px;
+  }
+  
+  .market-category h3 {
+    font-size: 1.2rem;
+  }
+  
+  .advantage h3 {
+    font-size: 1.2rem;
+  }
+  
+  #about .text-container p {
+    font-size: 1rem;
+  }
+  
+  .market-category,
+  .advantage {
+    padding: 1.5rem;
   }
 }
