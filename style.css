@@ -71,7 +71,7 @@ a:hover {
   cursor: default;
 }
 
-/* Hamburger Nav - UPDATED TO MATCH EXAMPLE */
+/* Hamburger Nav - FIXED: HIDDEN BY DEFAULT */
 #hamburger-nav {
   display: none;
   justify-content: space-between;
@@ -124,6 +124,9 @@ a:hover {
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-radius: 0.5rem;
+  /* HIDDEN BY DEFAULT */
+  opacity: 0;
+  visibility: hidden;
 }
 
 .menu-links a {
@@ -152,6 +155,9 @@ a:hover {
 
 .menu-links.open {
   max-height: 500px;
+  /* VISIBLE WHEN OPEN */
+  opacity: 1;
+  visibility: visible;
 }
 
 .hamburger-icon.open span:first-child {
@@ -935,7 +941,7 @@ footer p {
   color: white;
 }
 
-/* Responsive Design - UPDATED BREAKPOINTS TO MATCH EXAMPLE */
+/* Responsive Design - UPDATED BREAKPOINTS */
 @media screen and (max-width: 1400px) {
     #hero {
         height: 83vh;
