@@ -20,7 +20,7 @@
                     <li><a href="#competitive-edge">Why Choose Us</a></li>
                     <li><a href="#staff">Staff</a></li>
                     <li><a href="#contact">Contact Info</a></li>
-                    <li><a href="#callToAction">Get Quote</a></li>
+                    <li><a href="#contact-form">Get Quote</a></li>
                 </ul>
             </div>
         </nav> 
@@ -39,7 +39,7 @@
                     <li><a href="#competitive-edge" onclick="toggleMenu()">Why Choose Us</a></li>
                     <li><a href="#staff" onclick="toggleMenu()">Staff</a></li>
                     <li><a href="#contact" onclick="toggleMenu()">Contact Info</a></li>
-                    <li><a href="#callToAction" onclick="toggleMenu()">Get Quote</a></li>
+                    <li><a href="#contact-form" onclick="toggleMenu()">Get Quote</a></li>
                 </div>
             </div>
         </nav>
@@ -318,13 +318,58 @@
             </div>
         </section>
 
+        <!-- Contact Form Section -->
+        <section id="contact-form">
+            <div class="contact-form-container">
+                <h2 class="title">Get In Touch With Us</h2>
+                <p class="section__text__p1">Send us a message and we'll get back to you shortly</p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="armed-security">Armed & Unarmed Security</option>
+                            <option value="secure-transport">Secure Transportation</option>
+                            <option value="risk-assessment">Risk Assessment & Planning</option>
+                            <option value="patrol-services">Patrol Services & Surveillance</option>
+                            <option value="access-control">Access Control & Biometrics</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your security needs..." rows="5"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-color-1 submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
         <!-- Call to Action Section -->
         <section id="callToAction">
             <div class="cta-container">
                 <h2>Need Immediate Security Assistance?</h2>
                 <p>Contact us today for a free security assessment and quote</p>
                 <div class="btn-container">
-                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Get Security Quote</button>
+                    <button class="btn btn-color-1" onclick="location.href='./#contact-form'">Get Security Quote</button>
                     <button class="btn btn-color-2" onclick="location.href='tel:+27660670102'">24/7 Emergency Line</button>
                 </div>
             </div>
@@ -351,6 +396,7 @@
                         <li><a href="#competitive-edge">Why Us</a></li>
                         <li><a href="#staff">Staff</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact-form">Get Quote</a></li>
                     </ul>
                 </div>
             </nav>
