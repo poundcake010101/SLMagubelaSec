@@ -108,22 +108,36 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         return;
     }
     
-    // Here you would typically send the data to a server
-    // For now, we'll just show a success message and reset the form
-    console.log('Form submitted:', formData);
+    // Show loading state
+    const submitBtn = document.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
     
-    // Show success message (you can customize this)
-    alert('Thank you for your message! We will get back to you shortly.');
-    
-    // Reset form
-    this.reset();
-    
-    // Optional: Send email using mailto (basic fallback)
-    const subject = `Security Inquiry from ${formData.name}`;
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0AMessage: ${formData.message}`;
-    
-    
-    window.location.href = `mailto:siphosihlesiya@gmail.com?subject=${subject}&body=${body}`;
+    // Send to Formspree
+    fetch('https://formspree.io/f/mqayorar', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Thank you for your message! We will get back to you shortly.');
+            this.reset();
+        } else {
+            throw new Error('Network response was not ok');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Sorry, there was an error sending your message. Please try again or contact us directly.');
+    })
+    .finally(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
 });
 
 // Validation
