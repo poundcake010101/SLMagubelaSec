@@ -71,35 +71,30 @@ a:hover {
   cursor: default;
 }
 
-/* Hamburger Nav - IMPROVED MOBILE NAV */
+/* Hamburger Nav - UPDATED TO MATCH EXAMPLE */
 #hamburger-nav {
   display: none;
   justify-content: space-between;
   align-items: center;
-  height: 12vh;
+  height: 17vh;
   background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 #hamburger-nav .logo {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #2c3e50;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 70%;
 }
 
 .hamburger-menu {
   position: relative;
   display: inline-block;
-  z-index: 1001;
 }
 
 .hamburger-icon {
@@ -109,47 +104,42 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
-  z-index: 1002;
 }
 
 .hamburger-icon span {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: black;
   transition: all 0.3s ease-in-out;
-  transform-origin: center;
 }
 
 .menu-links {
-  position: fixed;
-  top: 12vh;
-  left: 0;
+  position: absolute;
+  top: 100%;
   right: 0;
   background-color: white;
-  width: 100%;
+  width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.4s ease-in-out;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  z-index: 999;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 0.5rem;
 }
 
 .menu-links a {
   display: block;
-  padding: 18px 20px;
+  padding: 15px 20px;
   text-align: center;
   font-size: 1.1rem;
   color: black;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   border-bottom: 1px solid #f0f0f0;
-  font-weight: 500;
 }
 
 .menu-links a:hover {
-  background-color: #2c3e50;
-  color: white;
-  text-decoration: none;
+  background-color: #f8f9fa;
+  color: #2c3e50;
 }
 
 .menu-links li {
@@ -161,26 +151,24 @@ a:hover {
 }
 
 .menu-links.open {
-  max-height: 100vh;
-  overflow-y: auto;
+  max-height: 500px;
 }
 
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(10px, 5px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
-  transform: translateX(-10px);
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(10px, -5px);
 }
 
 /* Sections - IMPROVED MOBILE SPACING */
 section {
-  padding-top: 12vh;
+  padding-top: 17vh;
   min-height: 80vh;
   margin: 0 auto;
   box-sizing: border-box;
@@ -947,289 +935,215 @@ footer p {
   color: white;
 }
 
-/* Responsive Design - IMPROVED MOBILE BREAKPOINTS */
+/* Responsive Design - UPDATED BREAKPOINTS TO MATCH EXAMPLE */
+@media screen and (max-width: 1400px) {
+    #hero {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    .about-containers{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav{
+        display: flex;
+    }
+    #services,
+    .skills-details-container{
+        margin-top: 2rem;
+    }
+    #hero,
+    .section-container{
+        display: block;
+    }
+    section,
+    .section-container{
+        height: fit-content;
+    }
+    section{
+        margin: 0 5%;
+    }
+    .section__pic-container{
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+    .about-containers{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #contact,
+    footer{
+        height: 40vh;
+    }
+    #hero{
+        height: 83vh;
+        margin-bottom: 0;
+    }
+    article{
+        font-size: 1rem;
+    }
+    footer nav{
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container{
+        flex-wrap: wrap;
+    }
+    .contact-info-container{
+        margin: 0;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+        font-size: 1rem;
+    }
+    .skills-sub-title{
+        font-size: 1.25rem;
+    }
+    .logo{
+        font-size: 1.5rem;
+    }
+    .nav-links{
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .section__pic-container{
+        width: auto;
+        height: 46vh;
+        justify-content: center;
+    }
+    .section__text__p2{
+        font-size: 1.25rem;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .text-container{
+        text-align: justify;
+    }
+}
+
 @media screen and (max-width: 768px) {
-  /* Hide desktop nav on mobile */
-  #desktop-nav {
-    display: none;
-  }
-  
-  /* Show hamburger nav on mobile */
-  #hamburger-nav {
-    display: flex;
-  }
-  
-  section {
-    margin: 0 auto;
-    padding-top: 12vh;
-    min-height: auto;
-    padding-bottom: 2rem;
-  }
-  
-  .section-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 0 1rem;
-  }
-  
-  #hero .section-container {
-    flex-direction: column;
-  }
-  
-  #hero .section__text,
-  #hero .title,
-  #hero .section__text__p1,
-  #hero .section__text__p2 {
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 2rem;
-  }
-  
-  .contact-info-upper-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  .btn-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  
-  .btn {
-    width: 100%;
-    max-width: 280px;
-    margin: 0.2rem 0;
-  }
-  
-  /* About Section Mobile */
-  #about .section-container {
-    gap: 1.5rem;
-  }
-  
-  #about .section__pic-container {
-    max-width: 280px;
-  }
-  
-  #about .text-container p {
-    text-align: center;
-    font-size: 0.95rem;
-  }
-  
-  /* Markets & Advantages Mobile */
-  .markets-container,
-  .advantages-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  
-  .market-category,
-  .advantage {
-    width: 100%;
-    max-width: 100%;
-    margin: 0.3rem 0;
-  }
-  
-  /* Services Mobile */
-  #services .details-container {
-    min-width: 100%;
-    margin: 0.5rem 0;
-  }
-  
-  .about-containers {
-    gap: 0.8rem;
-  }
-  
-  /* Contact Form Responsive */
-  .contact-form-container {
-    padding: 1.5rem;
-    margin: 0 auto;
-  }
-  
-  .form-group {
-    min-width: 100%;
-  }
-  
-  .contact-form {
-    gap: 1rem;
-  }
-  
-  /* Video Modal Mobile */
-  .video-modal-content {
-    width: 95%;
-    margin: 15% auto;
-  }
-  
-  .video-modal-content video {
-    height: auto;
-    max-height: 50vh;
-  }
-  
-  .close-btn {
-    top: -40px;
-    right: 5px;
-    font-size: 30px;
-    width: 35px;
-    height: 35px;
-  }
-  
-  .click-hint {
-    font-size: 0.85rem;
-  }
-  
-  /* Adjust hero section for mobile */
-  #hero {
-    padding: 3rem 1rem;
-    min-height: 85vh;
-  }
-  
-  #hero .title {
-    font-size: 2rem;
-  }
-  
-  #hero .section__text__p1 {
-    font-size: 1rem;
-  }
-  
-  #hero .section__text__p2 {
-    font-size: 0.95rem;
-  }
+    .section-container {
+        flex-direction: column;
+    }
 
-  /* Improve menu links for mobile */
-  .menu-links {
-    top: 12vh;
-  }
+    .section__pic-container, 
+    .section__text {
+        max-width: 100%;
+    }
 
-  .menu-links a {
-    padding: 16px 20px;
-    font-size: 1.1rem;
-  }
+    /* Adjust section padding for mobile */
+    section {
+        padding-top: 12vh;
+        margin: 0 1rem;
+    }
+
+    /* Improve hamburger menu for mobile */
+    #hamburger-nav {
+        padding: 0 1.5rem;
+    }
+
+    .menu-links {
+        width: 200px;
+    }
+
+    .menu-links a {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
 }
 
 /* For very small screens */
 @media screen and (max-width: 480px) {
-  #hamburger-nav {
-    padding: 0 1rem;
-    height: 10vh;
-  }
-  
-  #hamburger-nav .logo {
-    font-size: 1.2rem;
-    max-width: 65%;
-  }
-  
-  .title {
-    font-size: 1.8rem;
-  }
-  
-  #hero .title {
-    font-size: 1.8rem;
-  }
-  
-  .menu-links {
-    width: 100%;
-    top: 10vh;
-  }
+    #hamburger-nav {
+        padding: 0 1rem;
+    }
+    
+    #hamburger-nav .logo {
+        font-size: 1.3rem;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    #hero .title {
+        font-size: 1.8rem;
+    }
+    
+    .menu-links {
+        width: 180px;
+    }
 
-  .menu-links a {
-    padding: 14px 16px;
-    font-size: 1rem;
-  }
-  
-  .video-modal-content {
-    margin: 20% auto;
-  }
-  
-  .video-modal-content video {
-    height: auto;
-    max-height: 40vh;
-  }
-  
-  .market-category h3 {
-    font-size: 1.1rem;
-  }
-  
-  .advantage h3 {
-    font-size: 1.1rem;
-  }
-  
-  #about .text-container p {
-    font-size: 0.9rem;
-  }
-  
-  .market-category,
-  .advantage {
-    padding: 1.2rem;
-  }
-  
-  .contact-form-container {
-    padding: 1.2rem;
-  }
-  
-  #contact-form {
-    padding: 3rem 1rem;
-  }
+    .menu-links a {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .video-modal-content {
+        margin: 20% auto;
+    }
+    
+    .video-modal-content video {
+        height: auto;
+        max-height: 40vh;
+    }
+    
+    .market-category h3 {
+        font-size: 1.1rem;
+    }
+    
+    .advantage h3 {
+        font-size: 1.1rem;
+    }
+    
+    #about .text-container p {
+        font-size: 0.9rem;
+    }
+    
+    .market-category,
+    .advantage {
+        padding: 1.2rem;
+    }
+    
+    .contact-form-container {
+        padding: 1.2rem;
+    }
+    
+    #contact-form {
+        padding: 3rem 1rem;
+    }
 
-  .details-container {
-    padding: 1.2rem 0.8rem;
-    min-width: 140px;
-  }
+    .details-container {
+        padding: 1.2rem 0.8rem;
+        min-width: 140px;
+    }
 
-  .details-container i {
-    font-size: 1.8rem;
-  }
+    .details-container i {
+        font-size: 1.8rem;
+    }
 
-  section {
-    padding-top: 10vh;
-  }
+    section {
+        padding-top: 12vh;
+    }
 
-  #hero {
-    min-height: 80vh;
-  }
+    #hero {
+        min-height: 80vh;
+    }
 
-  .btn {
-    padding: 0.9rem 1.2rem;
-    font-size: 0.95rem;
-  }
-}
-
-/* Extra small devices */
-@media screen and (max-width: 360px) {
-  #hamburger-nav {
-    padding: 0 0.8rem;
-  }
-  
-  #hamburger-nav .logo {
-    font-size: 1.1rem;
-  }
-  
-  .title {
-    font-size: 1.6rem;
-  }
-  
-  #hero .title {
-    font-size: 1.6rem;
-  }
-
-  .section__text__p1 {
-    font-size: 0.9rem;
-  }
-
-  .btn {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .contact-info-container {
-    padding: 0.8rem;
-  }
-
-  .contact-info-container p,
-  .contact-info-container a {
-    font-size: 0.9rem;
-  }
+    .btn {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.95rem;
+    }
 }
