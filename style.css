@@ -1,4 +1,6 @@
-/* General */
+/* ========================
+   GENERAL STYLES
+   ======================== */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +24,9 @@ a,
   transition: all 300ms ease;
 }
 
-/* Desktop Nav */
+/* ========================
+   DESKTOP NAVIGATION
+   ======================== */
 nav, 
 .nav-links {
   display: flex;
@@ -69,25 +73,22 @@ a:hover {
   cursor: default;
 }
 
-/* Hamburger Nav - UPDATED */
+/* ========================
+   HAMBURGER NAVIGATION
+   (New Style requested)
+   ======================== */
 #hamburger-nav {
-  display: none; /* Hidden by default */
-  justify-content: space-between;
+  display: none; /* Hidden on desktop */
+  justify-content: space-around;
   align-items: center;
   height: 17vh;
-  background-color: white;
-  position: fixed;
+  /* Fixed position to stick to top like desktop nav */
+  position: fixed; 
   top: 0;
   width: 100%;
+  background-color: white;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 0 2rem;
-}
-
-#hamburger-nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #2c3e50;
 }
 
 .hamburger-menu {
@@ -102,77 +103,68 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
-  z-index: 1001;
 }
 
 .hamburger-icon span {
-  display: block;
   width: 100%;
-  height: 3px;
-  background-color: #2c3e50;
-  transition: all 0.3s ease-in-out;
-  transform-origin: center;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
 }
 
 .menu-links {
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   right: 0;
   background-color: white;
-  width: 250px;
+  width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  border-radius: 0.5rem;
-  z-index: 1000;
+  transition: all 0.3 ease-in-out;
+  /* Added border radius and shadow for better look */
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .menu-links a {
   display: block;
-  padding: 15px 20px;
-  text-align: left;
-  font-size: 1.1rem;
-  color: #333;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.menu-links a:hover {
-  background-color: #f8f9fa;
-  color: #2c3e50;
-  padding-left: 25px;
+  transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-.menu-links li:last-child a {
-  border-bottom: none;
-}
-
+/* JavaSript adds this class to slide menu down */
 .menu-links.open {
-  max-height: 500px;
+  max-height: 300px;
 }
 
+/* Animations for the X Icon */
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(10px, 5px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
-  transform: translateX(-10px);
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(10px, -5px);
 }
 
-/* Sections */
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* ========================
+   SECTIONS & LAYOUT
+   ======================== */
 section {
   padding-top: 10vh;
   min-height: 80vh;
@@ -190,7 +182,7 @@ section {
   width: 100%;
 }
 
-/* Hero Section - Security Theme */
+/* Hero Section */
 #hero {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
   color: white;
@@ -255,7 +247,6 @@ section {
   background-color: #f8f9fa;
 }
 
-/* About Section Layout */
 #about .section-container {
   display: flex;
   align-items: center;
@@ -380,6 +371,7 @@ section {
   color: #555;
   text-align: center;
 }
+
 #services .project-img {
   height: auto;
   max-height: 300px;
@@ -509,6 +501,7 @@ section {
   padding: 6rem 2rem;
   background-color: #f8f9fa;
 }
+
 #staff .project-img {
   height: auto;
   max-height: 300px;
@@ -672,27 +665,6 @@ section {
   min-width: auto;
 }
 
-/* Form validation styles */
-.form-group input:invalid:not(:focus):not(:placeholder-shown),
-.form-group textarea:invalid:not(:focus):not(:placeholder-shown) {
-  border-color: #e74c3c;
-}
-
-.form-group input:valid:not(:focus):not(:placeholder-shown),
-.form-group textarea:valid:not(:focus):not(:placeholder-shown) {
-  border-color: #27ae60;
-}
-
-/* Success message */
-.form-success {
-  background: #27ae60;
-  color: white;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  margin-top: 1rem;
-  display: none;
-}
-
 /* Call to Action Section */
 #callToAction {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
@@ -718,7 +690,7 @@ section {
   color: #e0e0e0;
 }
 
-/* Buttons - Security Focused Color Scheme */
+/* Buttons */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -755,7 +727,6 @@ section {
   transform: translateY(-2px);
 }
 
-/* Emergency button styling */
 .btn-color-2:hover {
   background: #e74c3c; 
   color: white;
@@ -787,7 +758,6 @@ section {
   letter-spacing: 2px;
 }
 
-/* Skills Sub Title */
 .skills-sub-title {
   color: #2c3e50;
   font-weight: 600;
@@ -796,7 +766,6 @@ section {
   text-align: center;
 }
 
-/* Article Container */
 .article-container {
   display: flex;
   text-align: initial;
@@ -806,7 +775,7 @@ section {
   justify-content: center;
 }
 
-/* Video Modal Styling */
+/* Video Modal */
 .video-modal {
   display: none;
   position: fixed;
@@ -885,117 +854,72 @@ footer p {
   color: #000000;
 }
 
-.nav-links-container .nav-links a:hover {
-  color: rgb(0, 0, 0);
-}
-
-/* ============================
-   MEDIA QUERIES - RESPONSIVE DESIGN
-   ============================ */
-
-/* For tablets and smaller desktops (max-width: 1200px) */
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  
-  #hamburger-nav {
-    display: flex;
-  }
-  
-  #hero .section-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  #hero .title {
-    font-size: 3rem;
-  }
-  
-  .section-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* For tablets (max-width: 768px) */
+/* ========================
+   MEDIA QUERIES
+   ======================== */
 @media screen and (max-width: 768px) {
-  /* Navigation */
+  /* HIDE DESKTOP NAV */
   #desktop-nav {
     display: none;
   }
   
+  /* SHOW HAMBURGER NAV */
   #hamburger-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    height: 12vh;
+    display: flex; 
   }
   
-  /* Hero Section */
-  #hero {
-    padding: 6rem 1rem 4rem;
-    min-height: 85vh;
-  }
-  
-  #hero .title {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-  
-  #hero .section__text__p1 {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  
-  #hero .section__text__p2 {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-  
-  #hero .btn-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  #hero .btn {
-    width: 100%;
-    max-width: 250px;
-  }
-  
-  /* Sections */
   section {
     margin: 0 1rem;
     padding-top: 8rem;
   }
   
-  .title {
-    font-size: 2.2rem;
+  .section-container {
+    flex-direction: column;
+    text-align: center;
   }
   
-  /* About Section */
-  #about .about-containers {
+  #hero .section-container {
+    flex-direction: column;
+  }
+  
+  #hero .section__text,
+  #hero .title,
+  #hero .section__text__p1,
+  #hero .section__text__p2 {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-info-upper-container {
     flex-direction: column;
     align-items: center;
   }
   
-  #about .details-container {
-    width: 100%;
-    max-width: 350px;
-  }
-  
-  /* Services Section */
-  .about-containers {
+  .btn-container {
     flex-direction: column;
+    align-items: center;
   }
   
-  .details-container.color-container {
+  .btn {
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
   }
   
-  /* Markets & Advantages */
+  #about .section-container {
+    gap: 2rem;
+  }
+  
+  #about .section__pic-container {
+    max-width: 300px;
+  }
+  
+  #about .text-container p {
+    text-align: center;
+  }
+  
   .markets-container,
   .advantages-container {
     flex-direction: column;
@@ -1005,57 +929,21 @@ footer p {
   .market-category,
   .advantage {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
   }
   
-  /* Contact Info */
-  .contact-info-upper-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-  }
-  
-  .contact-info-container {
-    width: 100%;
-    max-width: 300px;
-    justify-content: flex-start;
-  }
-  
-  /* Contact Form */
-  #contact-form {
-    padding: 3rem 1rem;
-  }
-  
-  .contact-form-container {
-    padding: 1.5rem;
-  }
-  
-  .form-group {
+  #services .details-container {
     min-width: 100%;
   }
   
-  /* Buttons */
-  .btn-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .btn {
-    width: 100%;
-    max-width: 250px;
-    min-width: auto;
-  }
-  
-  /* Footer */
-  .nav-links-container .nav-links {
-    flex-direction: column;
+  .nav-links {
     gap: 1rem;
+    font-size: 1.1rem;
   }
   
-  /* Video Modal */
   .video-modal-content {
     width: 95%;
-    margin: 10% auto;
+    margin: 15% auto;
   }
   
   .video-modal-content video {
@@ -1063,16 +951,36 @@ footer p {
   }
   
   .close-btn {
-    top: -40px;
-    right: 0;
-    font-size: 30px;
+    top: -45px;
+    right: 10px;
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .click-hint {
+    font-size: 0.9rem;
+  }
+  
+  #hero {
+    padding: 6rem 1rem;
+  }
+  
+  #hero .title {
+    font-size: 2.8rem;
+  }
+  
+  #hero .section__text__p1 {
+    font-size: 1.3rem;
+  }
+  
+  #hero .section__text__p2 {
+    font-size: 1.1rem;
   }
 }
 
-/* For mobile phones (max-width: 480px) */
 @media screen and (max-width: 480px) {
   #hamburger-nav {
-    height: 10vh;
     padding: 0 1rem;
   }
   
@@ -1080,89 +988,41 @@ footer p {
     font-size: 1.3rem;
   }
   
-  .hamburger-icon {
-    height: 20px;
-    width: 25px;
-  }
-  
-  .menu-links {
-    width: 200px;
-  }
-  
-  .menu-links a {
-    padding: 12px 15px;
-    font-size: 1rem;
-  }
-  
-  #hero {
-    padding: 5rem 1rem 3rem;
-  }
-  
-  #hero .title {
+  .title {
     font-size: 2rem;
   }
   
-  #hero .section__text__p1 {
-    font-size: 1.1rem;
+  #hero .title {
+    font-size: 2.2rem;
   }
   
-  #hero .section__text__p2 {
-    font-size: 1rem;
-  }
-  
-  .title {
-    font-size: 1.8rem;
-  }
-  
-  .section__text__p1 {
-    font-size: 1rem;
-  }
-  
-  .details-container,
-  .color-container,
-  .market-category,
-  .advantage {
-    padding: 1.5rem;
-  }
-  
-  .market-category h3,
-  .advantage h3 {
-    font-size: 1.2rem;
-  }
-  
-  .contact-form-container h2 {
-    font-size: 1.8rem;
+  /* Adjusted menu width for small screens */
+  .menu-links {
+    width: 180px;
   }
   
   .video-modal-content {
-    margin: 15% auto;
+    margin: 20% auto;
   }
   
   .video-modal-content video {
     height: 250px;
   }
-}
-
-/* For very small screens (max-width: 320px) */
-@media screen and (max-width: 320px) {
-  #hamburger-nav .logo {
-    font-size: 1.1rem;
+  
+  .market-category h3 {
+    font-size: 1.2rem;
   }
   
-  .menu-links {
-    width: 180px;
+  .advantage h3 {
+    font-size: 1.2rem;
   }
   
-  #hero .title {
-    font-size: 1.8rem;
-  }
-  
-  .title {
-    font-size: 1.6rem;
-  }
-  
-  .btn {
-    padding: 0.8rem 1.5rem;
+  #about .text-container p {
     font-size: 1rem;
+  }
+  
+  .market-category,
+  .advantage {
+    padding: 1.5rem;
   }
 }
