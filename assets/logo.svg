@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <defs>
+    <style>
+      .lbl { font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif; }
+      .sub { font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Outer shield -->
+  <path d="M100,6 L188,42 L188,122 Q188,174 100,202 Q12,174 12,122 L12,42 Z"
+        fill="#0F1318" stroke="#C9A84C" stroke-width="2.5"/>
+
+  <!-- Inner shield border -->
+  <path d="M100,20 L174,52 L174,120 Q174,166 100,190 Q26,166 26,120 L26,52 Z"
+        fill="#151A22" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
+
+  <!-- Top accent bar -->
+  <rect x="34" y="54" width="132" height="2" rx="1" fill="#C9A84C" opacity="0.6"/>
+
+  <!-- Protection ring -->
+  <circle cx="100" cy="106" r="36" fill="none" stroke="#C9A84C" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="100" cy="106" r="28" fill="#0F1318" stroke="#C9A84C" stroke-width="1.5"/>
+
+  <!-- Mini shield inside circle -->
+  <path d="M100,88 L112,94 L112,108 Q112,118 100,123 Q88,118 88,108 L88,94 Z"
+        fill="#C9A84C" opacity="0.15" stroke="#C9A84C" stroke-width="0.8"/>
+
+  <!-- SLM initials -->
+  <text x="100" y="113" text-anchor="middle" class="lbl"
+        font-size="18" fill="#C9A84C" letter-spacing="1">SLM</text>
+
+  <!-- Top diamond accent -->
+  <polygon points="100,13 104,19 100,25 96,19" fill="#C9A84C"/>
+
+  <!-- Company name -->
+  <text x="100" y="148" text-anchor="middle" class="lbl"
+        font-size="13" fill="#F5F5F0" letter-spacing="2.5">S L MAGUBELA</text>
+
+  <!-- Divider -->
+  <rect x="42" y="154" width="116" height="0.8" rx="0.4" fill="#C9A84C" opacity="0.7"/>
+
+  <!-- Sub lines -->
+  <text x="100" y="166" text-anchor="middle" class="sub"
+        font-size="7" fill="#C9A84C" letter-spacing="2" font-weight="600">ESCORT SECURITY</text>
+  <text x="100" y="177" text-anchor="middle" class="sub"
+        font-size="7" fill="#9A7A35" letter-spacing="2" font-weight="600">&amp; TRANSPORT</text>
+
+  <!-- Bottom tip accent -->
+  <polygon points="100,200 104,193 96,193" fill="#C9A84C" opacity="0.8"/>
+</svg>
